@@ -26,16 +26,13 @@ export default function App() {
             setLastHash(hash);
             notificationAsync(NotificationFeedbackType.Success);
             if (baseURL !== null) {
-                const controller = new AbortController();
-                fetch(baseURL + hash, { signal: controller.signal })
-                .catch((err) => {
-                    if (err instanceof DOMException && err.code == DOMException.ABORT_ERR) {
-                        alert("Request timed out");
-                    } else {
-                        alert(err);
-                    }
+                Promise.race([
+                    fetch(baseURL + hash),
+                    new Promise((_, reject) =>
+                        setTimeout(() => reject(new Error("Request timed out")), 1000))
+                ]).catch(err => {
+                    alert(err);
                 });
-                setTimeout(() => controller.abort(), 1000);
             }
         }
     };
