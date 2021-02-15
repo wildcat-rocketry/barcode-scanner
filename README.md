@@ -7,22 +7,26 @@ To use this app, follow these steps:
 
 1. Download Expo Go app (from [iOS App Store](https://itunes.apple.com/app/apple-store/id982107779) or [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www))
 
-2. On Android, scan QR code in Expo Go app
+2. For iOS only, create an Expo account, then have an admin add you to the project
+
+3. On Android, scan QR code in Expo Go app
 
    On iOS, scan QR code in camera app
 
    ![](appinstall.png)
 
-3. Download the [latest server build](https://github.com/final-frontier-aerospace/barcode-scanner/releases)
+4. Download and install [Java](https://www.java.com/en/download/)
 
-4. Unzip the server build
+5. Download the [latest server build](https://github.com/final-frontier-aerospace/barcode-scanner/releases)
 
-5. On Windows, run `bin/Barcode Scanner.bat`
+6. Extract the server build
+
+7. On Windows, run `bin/Barcode Scanner.bat`
 
    On everything else, run `bin/Barcode Scanner`
 
-6. Scan the QR code which appeared on the PC with the phone app
+8. Scan the QR code which appeared on the PC with the phone app
 
-7. Open up the spreadsheet or desired application on the PC
+9. Open up the spreadsheet or desired application on the PC
 
-8. Start scanning with the phone
+10. Start scanning with the phone
