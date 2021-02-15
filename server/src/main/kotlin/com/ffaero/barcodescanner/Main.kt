@@ -4,6 +4,8 @@ fun main() {
     val port = 8000
     val srv = Server(port)
     srv.handler = VirtualKeyboard()
-    println("Server running on http://${NetIface.ipAddress}:${port}/")
+    val url = "http://${NetIface.ipAddress}:${port}/"
+    Window(url)
+    println("Server running on $url")
     srv.start()
 }
